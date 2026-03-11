@@ -11,3 +11,6 @@ authors = [{ name = "Simon Cozens", email = "simon@simon-cozens.org" }]
 
 [tool.setuptools.packages.find]
 where = ["Lib"]
+
+[tool.setuptools_scm]
+git_describe_command = "git describe --match 'v*' --tags"
