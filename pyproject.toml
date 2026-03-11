@@ -2,7 +2,7 @@
 requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 [project]
-name = "noodler"
+name = "nudelo"
 description = "Path stroking for UFO glyphs"
 readme = "README.md"
 dependencies = ["ufo2ft", "kurbopy>=0.13.1"]

@@ -1,11 +1,11 @@
-# noodler-py
+# nudelo
 
 This Python module implements round path stroking ("noodling")
 for `kurbopy` `BezPath` objects. It currently exports one function,
 `noodle`:
 
 ```python
-from noodler import noodle
+from nudelo import noodle
 from kurbopy import BezPath
 f = ufoLib2.Font("tests/data/Scurve.ufo")
 paths = BezPath.from_drawable(f["A"])
@@ -16,13 +16,10 @@ for path in paths:
   
 ```
 
-This modifies the glyph in place. The library works with defcon and ufoLib2
-objects.
-
 This may also be used as a fontmake command line plugin:
 
 ```
-fontmake --filter 'noodler::NoodleFilter(pre=True,Width=50)' -u OpenPaths.ufo -o ttf
+fontmake --filter 'nudelo::NoodleFilter(pre=True,Width=50)' -u OpenPaths.ufo -o ttf
 ```
 
 Or by adding a lib key into the UFO file's `lib.plist` file:
@@ -32,7 +29,7 @@ Or by adding a lib key into the UFO file's `lib.plist` file:
     <array>
       <dict>
         <key>name</key>
-        <string>noodler.NoodleFilter</string>
+        <string>nudelo.NoodleFilter</string>
         <key>pre</key>
         <true/>
         <key>kwargs</key>
@@ -52,17 +49,7 @@ Or by adding a lib key into the UFO file's `lib.plist` file:
     </array>
 ```
 
-## Building
-
-Use `maturin` to build `noodler`.
-
-```
-pip3 install maturin
-python3 -m venv strokervenv
-. ./strokervenv/bin/activate
-maturin develop
-maturin build # Build wheel
-```
+The name "nudelo" is the Esperanto for "noodle".
 
 ## License
 
